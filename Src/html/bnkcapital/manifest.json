@@ -1,0 +1,14 @@
+{
+    "short_name": "신세계백화점",
+    "name": "신세계백화점",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "16x16",
+        "type": "image/ico"
+      }
+    ],
+    "start_url": "https://abbeyroad2022.github.io/shinsegae/html/shinsegae/home.html",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
