@@ -492,12 +492,12 @@ section {
 // bottom sheet
 .bottom-sheet {
 	position: absolute;
-	bottom: rem(10);
+	bottom: rem(34);
 	left: rem(10);
 	right: rem(10);
 	z-index: 1000;
 	border-radius: rem(30);
-	transform: translateY(105%);
+	transform: translateY(120%);
 	transition: transform .3s ease-in-out;
 	background-color: #fff;
 	&.is-active {
