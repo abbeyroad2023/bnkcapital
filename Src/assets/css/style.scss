@@ -5,10 +5,15 @@
 @import 'scss/utils/functions';
 @import 'scss/utils/flexbox';
 
+@import 'scss/base/font';
 @import 'scss/base/reset';
 @import 'scss/base/common';
 
 @import 'scss/components/layout';
 @import 'scss/components/layout_web';
+@import 'scss/components/button';
+@import 'scss/components/icon';
+@import 'scss/components/tab';
+@import 'scss/components/form';
 
 @import 'scss/pages/contents';

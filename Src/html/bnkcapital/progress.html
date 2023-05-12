@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	${require('html-loader?interpolate!../_template/common_meta.html')}
+	<title>BNK캐피탈</title>
+	${require('html-loader?interpolate!../_template/common_res_sub.html')}
+</head>
+<body>
+
+<!-- #wrapper_web -->
+<div id="wrapper_web">
+
+	<!-- #container_web -->
+	<main id="container_web">
+
+		<!-- mobile source -->
+		<div id="wrap" class="mobile_area page-sub in-progress">
+			<!-- #statusbar -->
+			<div id="statusbar"></div>
+			<!-- //#statusbar -->
+			<!-- #header -->
+			<div id="header" class="top-fixed">
+				<button class="btn btn-back" onclick="history.go(-1); return false;"><i class="ic ic-back"></i><span class="sr-only">이전</span></button>
+				<h2 class="title">직장인 신용대출</h2>
+			</div>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+
+				<!-- #section -->
+				<section id="scrollArea">
+
+					<div class="div-cont">
+						<div id="progress0" class="progress-chat is-show">
+							안녕하세요. 직장인대출  한도와 금리 조회를 도와드릴 BNK Capital 챗봇입니다.<br><br>한도/금리 조회 전에 본인인증이 필요해요.<br><br>
+							<button type="button" class="btn btn-sel-secondary popup-open" data-popup="pop1"><span>휴대폰 본인인증
+							</span></button><br><br><br><br>
+						</div>
+
+						<div id="progress1" class="progress-chat">
+							휴대폰 본인인증을 완료하셨군요. <br><br>
+							신청중인 직장인대출이 있습니다. <br>
+							‘이어하기’를 하시겠어요? <br><br>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next1-1"><span>신규 한도조회하기</span></button><br>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next1-1"><span>이어하기</span></button><br><br>
+
+							<div id="next1-1" class="next-chat">
+								신규 한도조회하기 <br><br>
+								한도조회를 하려면 개인정보조회 약관동의가 필요해요<br><br>
+								약관동의<br><br>
+								<button type="button" class="btn btn-sel-secondary popup-open next-show" data-popup="pop2" data-next="next1-2"><span>약관동의</span></button><br><br>
+							</div>
+							<div id="next1-2" class="next-chat">
+								약관동의<br><br><br><br>
+							</div>
+						</div>
+
+						<div id="progress2" class="progress-chat">
+							개인정보조회 동의를 완료하셨습니다. <br><br>
+							고객님의 직장/소득정보를 알려주세요. <br><br>
+							근로소득자인 경우, 현재 재직중인 회사의 재직기간이 최소 3개월부터 신청가능합니다. <br><br>
+							<button type="button" class="btn btn-sel-secondary popup-open next-show" data-popup="pop3" data-next="next2-1"><span>소득정보입력</span></button><br><br>
+							<div id="next2-1" class="next-chat">
+								소득정보입력<br><br><br><br>
+							</div>
+						</div>
+						
+						<div id="progress3" class="progress-chat">
+							기타 직업<br>
+							㈜애비로드커뮤니케이션즈<br>
+							부장<br>
+							정규직<br>
+							2022년 3월 입사<br>
+							8,000만원<br><br><br><br>
+							건강보험공단, 국세청 등 공공기관의 정보확인을 위한 공동인증서 또는 금융인증서로 인증이 필요합니다. <br><br>
+							<button type="button" class="btn btn-sel-secondary popup-open" data-popup="pop4"><span>공동인증서 인증
+							</span></button>
+							<button type="button" class="btn btn-sel-secondary popup-open" data-popup="pop4"><span>금융인증서 인증</span></button><br><br><br><br>
+						</div>
+						
+						<div id="progress4" class="progress-chat">
+							<!-- 인증완료<br><br>
+							앗!<br>
+							고객님 이번에는 저희 BNK Capital 에서 대출이 어려울 것 같습니다.<br><br>
+							사유 : 당사 내부 심사기준에 부합하지 않습니다.<br><br>
+							제휴사의 다른 대출 상품을 추천 해드릴까요?<br><br>
+							<button type="button" class="btn btn-sel-secondary popup-open" data-popup="pop5"><span>다음에 신청
+							</span></button>
+							<button type="button" class="btn btn-sel-secondary popup-open" data-popup="pop5"><span>제휴사 대출 추천
+							</span></button><br><br> -->
+
+							고객님께서 알려주신 정보를 토대로 아래와 같이 예상한도/금리를 알려드립니다.<br><br>
+							대출기간 : 36개월<br>
+							예상한도 : 8,500만원<br>
+							예상금리 : 연 4.03%<br><br>
+							대출 한도/금리는 실제 대출 신청일에 변동될 수 있습니다.<br>
+							실제 대출 신청에서 대출이 거절되거나 대출 한도/금리가 변동 될 수 있습니다.<br><br>
+							대출신청을 이어서 하시겠어요?<br><br>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next4-1"><span>신규 한도조회하기</span></button>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next4-1"><span>대출신청하기</span></button><br><br>
+							<div id="next4-1" class="next-chat">
+								대출신청하기<br><br><br><br>
+								지금까지 잘 따라오셨습니다.<br><br>
+								몇 가지 정보만 더 알려주시면 대출신청이 완료됩니다.<br>
+								아래의 신청절차안내를 확인 해주세요.<br><br>
+								간편한도조회<br>
+								대출에 필요한 고객님의 몇가지 정보로 한도와 금리를 간편하게 조회해드려요.<br><br>
+								신청정보 확인/추가 입력<br>
+								입력된 정보, 대출신청금액 등 자세한 대출신청정보를 확인/입력해요.<br><br>
+								서류제출<br>
+								공동인증서(금융인증서)로 필요한 서류를 자동으로 제출해요.<br><br>
+								대출실행<br>
+								약정서를 작성하시면 입력하신 대출금입금일에 대출이 자동실행되요.<br><br><br><br>
+								신청절차를 확인하셨나요?<br><br>
+								대출신청정보 확인/입력 전, ‘금융소비자보호법’에 의거한 ‘고객 적합성/적합성‘ 확인이 필요해요.<br><br>
+								<button type="button" class="btn btn-sel-secondary popup-open next-show" data-popup="pop5" data-next="next4-2"><span>적합성/적성성 확인</span></button><br><br>
+							</div>
+							<div id="next4-2" class="next-chat">
+								적합성/적성성 확인<br><br><br><br>
+							</div>
+						</div>
+						
+						<div id="progress5" class="progress-chat">
+							적합성/적정성 확인<br><br>
+							용도 : 의료비<br>
+							자산 : 1억원 이상~5억원 미만<br>
+							연소득 : 8천만원 이상<br>
+							총 부채 : 1천만원 미만<br>
+							고정지출 : 소득의 50% 미만<br>
+							연체여부 : 없음<br>
+							신용점수 : 995점<br>
+							변제방법 : 근로소득<br><br><br><br>
+							적합성/적정성 확인 결과 대출상품가입이 적합 합니다.<br><br>
+							혹시, 대출 빙자 전화를 받으신 적이 있으신가요? 아래의 내용을 확인 해주세요.<br><br>
+							지금 진행하는 대출이, 금융회사 직원이라며 전화나 문자를 받아 진행하고 계신가요?<br>
+							신용등급 상향, 대출보증비 등의 수수료라며 돈을 언제 급금하라고 하던가요?<br>
+							고금리 대출을 받고 상환하여 저금리 대출이 가능하다는 이야기를 하던가요?<br><br>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next5-1"><span>네</span></button>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next5-1"><span>모두 아니오</span></button><br><br>
+
+							<div id="next5-1" class="next-chat">
+								모두 아니오<br><br><br><br>
+								현재까지 고객님께서 직장인신용대출 신청 내역 입니다.<br><br>
+								아래 내용을 확인하시고, 수정이 필요하시면 항목 신청내역을 수정해주세요.<br><br>
+								회사명 : ㈜애비로드커뮤니케이션즈<br>
+								직업군/직업 : 근로소득자/기타<br>
+								적합성/적정성 : 부합<br><br>
+								예상한도 : 8,500만원<br>
+								예상금리 : 연 4.03%<br><br>
+								<button type="button" class="btn btn-sel-secondary next-show" data-next="next5-2"><span>수정</span></button>
+								<button type="button" class="btn btn-sel-secondary next-show" data-next="next5-2"><span>진행</span></button><br><br>
+							</div>
+
+							<div id="next5-2" class="next-chat">
+								진행<br><br><br><br>
+								대출신청 금액은 최대한도 그대로 적용 할까요?<br><br>
+								<button type="button" class="btn btn-sel-secondary popup-open next-show" data-next="next5-3" data-popup="pop6"><span>아니오</span></button>
+								<button type="button" class="btn btn-sel-secondary popup-open next-show" data-next="next5-3" data-popup="pop6"><span>네</span></button><br><br>
+							</div>
+							<div id="next5-3" class="next-chat">
+								아니오<br><br><br><br>
+							</div>
+						</div>
+
+						<div id="progress6" class="progress-chat">
+							잘 따라오셨습니다. <br><br>
+							고객님께서 공동인증서 또는 금융인증서로 <br>
+							자동으로 제출하신 증빙서류입니다. <br><br>
+							아래 목록 중, 제출상태에 따라 필요한 추가서류를 제출 해주세요.<br><br>
+							주민등록표등본<br>
+							소득금액증명원<br>
+							건강보험납부내역서<br>
+							신분증<br><br>
+							<button type="button" class="btn btn-sel-secondary popup-open next-show" data-next="next6-1" data-popup="pop7"><span>신분증 제출</span></button><br><br>
+							<div id="next6-1" class="next-chat">
+								신분증 제출<br><br><br><br>
+							</div>
+						</div>
+
+						<div id="progress7" class="progress-chat">
+							대출서류 제출이 완료되었습니다.<br><br>
+							아래의 대출정보를 확인하셔서 대출신청완료 하시면 대출신청이 완료됩니다.<br><br>
+							대출신청금액 : 7,500만원<br>
+							적용금리 : 연 4.03%<br>
+							대출기간 : 24개월<br>
+							월 납입금(A+B) : 251,875원<br>
+							월 상환원금(A) : 0원<br>
+							월 상환이자(B) : 251,875원<br><br>
+							전자서명 후,<br> 
+							당사의 내부 확인이 약 1시간 ~ 2시간 정도 소요될 예정입니다.<br><br>
+							고객님의 알림톡으로 대출약정서를 확인요청 예정이며, 약정서에 전자서명을 하시면 고객님께서 요청하신 계좌로 즉시 입금됩니다.<br><br>
+							<button type="button" class="btn btn-sel-secondary next-show" data-next="next7-1"><span>대출신청완료</span></button><br><br><br><br>
+							<div id="next7-1" class="next-chat">
+								대출신청완료<br><br>
+								대출신청정보를 고객님의 이메일(ABC@aaa.com)로 전달하였습니다.<br><br>
+								감사합니다.<br><br><br><br>
+							</div>
+						</div>
+
+					</div>
+					
+				</section>
+				<!-- //#section -->
+
+			</div>
+			<!-- //#container -->
+
+			<!-- #bottom -->
+			<div id="bottom">
+				
+				
+
+
+
+			</div>
+			<!-- //#bottom -->
+
+
+						
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop1">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">휴대폰 본인인증</h3>
+					</div>
+					<div class="pop-body">
+						<!-- <div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step01-1.png"><img src="../../assets/img/pop1-step01-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step02-1.png"><img src="../../assets/img/pop1-step02-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step03-1.png"><img src="../../assets/img/pop1-step03-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step04-1.png"><img src="../../assets/img/pop1-step04-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step05-1.png"><img src="../../assets/img/pop1-step05-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step06-1.png"><img src="../../assets/img/pop1-step06-2.png"></div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						  </div> -->
+
+						<ul class="step-list">
+							<li class="is-show"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-2.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-2.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-2.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-2.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-2.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-1.png"></a></li>
+							<li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-2.png"></a></li>
+						</ul>
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt40">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress1"><span>완료</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop2">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">개인정보조회 약관동의</h3>
+					</div>
+					<div class="pop-body">
+						<!-- <ul class="step-list">
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-2.png"></a></li>
+						</ul> -->
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress2"><span>완료</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+			
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop3">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">직장, 소득정보</h3>
+					</div>
+					<div class="pop-body">
+						직장, 소득정보
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress3"><span>다음</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+			
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop4">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">인증</h3>
+					</div>
+					<div class="pop-body">
+						인증
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress4"><span>확인</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+			
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop5">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">고객 적합성/적정석 확인</h3>
+					</div>
+					<div class="pop-body">
+						고객 적합성/적정석 확인
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress5"><span>다음</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+			
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop6">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">대출신청정보</h3>
+					</div>
+					<div class="pop-body">
+						대출신청정보
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress6"><span>대출진행</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+			
+			<!-- .bottom-sheet -->
+			<div class="popup bottom-sheet" id="pop7">
+				<div class="inner">
+					<div class="pop-head">
+						<h3 class="tit">서류제출</h3>
+					</div>
+					<div class="pop-body">
+						서류제출<br>
+					</div>
+					<!-- .btn-group-row -->
+					<div class="btn-group-row mgt20">
+						<button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress7"><span>제출완료</span></button>
+					</div>
+					<!-- //.btn-group-row -->
+				</div>
+			</div>
+			<i class="modal-dim"></i>
+			<!-- //bottom-sheet -->
+
+
+		</div>
+		<!-- //mobile source -->
+
+	</main>
+	<!-- //#container_web -->
+
+</div>
+<!-- //#wrapper_web -->
+
+<script>
+	var swiper = new Swiper(".mySwiper", {
+      effect: "fade",
+	  touchRatio: 0,
+	  autoHeight : true,
+      navigation: {
+        nextEl: ".btn-step-next",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    });
+
+
+	// document.querySelectorAll('.step-next').forEach(nextShow => {
+	// 	// const nextId = nextShow.dataset.next;
+	// 	// const elNext = document.querySelector('#' + nextId);
+	// 	// if (elNext !== null) {
+	// 	// 	nextShow.addEventListener('click', () => {
+	// 	// 		elNext.classList.add('is-show');
+
+	// 	// 		console.log(nextId);
+
+	// 	// 	})
+	// 	// }
+
+	// 	nextShow.addEventListener('click', () => {
+	// 			// elNext.classList.add('is-show');
+
+	// 			console.log(nextShow);
+
+	// 		})
+
+
+	// })
+	// function fnGoInsert(){
+	// 		var step = document.querySelectorAll('.step-next');
+
+	// 		function btn_click(idx){
+	// 			step[idx].onclick = function(){
+	// 		        console.log(idx);
+	// 		    };
+	// 		}
+
+	// 		for(var i=0; i<step.length; i++){
+	// 		  btn_click(i);  
+	// 		}
+    //  }
+	//  fnGoInsert();
+
+</script>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
-    "short_name": "신세계백화점",
-    "name": "신세계백화점",
+    "short_name": "BNK캐피탈",
+    "name": "BNK캐피탈",
     "icons": [
       {
         "src": "favicon.ico",
@@ -8,7 +8,7 @@
         "type": "image/ico"
       }
     ],
-    "start_url": "https://abbeyroad2022.github.io/shinsegae/html/shinsegae/home.html",
+    "start_url": "https://abbeyroad2023.github.io/bnkcapital/html/bnkcapital/main.html",
     "display": "standalone",
     "orientation": "portrait"
   }

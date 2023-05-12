@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* ================================== Tab ================================== */
+.tab-group {
+	background-color: $color-white;
+}
+.tab-list {
+	display: flex;
+	align-items: center;
+	&.col3 .tab-item {
+		flex-basis: (1/3) * 100%;
+	}
+}
+.tab-item {
+	position: relative;
+	display: flex;
+	background-color: $color-spruce;
+	&:not(:first-child):before {
+		content: '';
+		position: absolute;
+		left: rem(-2);
+		top: 50%;
+		width: rem(2);
+		height: rem(14);
+		background-color: rgba($color-white, .25);
+		transform: translateY(-50%);
+	}
+	.tab {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: rem(60);
+		padding: rem(8);
+		margin: 0 rem(15);
+		color: $color-white;
+		font-weight: 700;
+        transition: all .3s;
+		//background-color: $color-spruce;
+	}
+	&.is-active {
+		background-color: $color-white;
+		&:before {
+			display: none;
+		}
+		.tab {
+			color: $color-black;
+			//background-color: $color-white;
+		}
+	}
+	.case-num {
+		display: inline-block;
+		min-width: rem(36);
+		height: rem(20);
+		line-height: rem(20);
+		margin-left: rem(9);
+		text-align: center;
+		color: $color-black;
+		font-family: $base-font-family;
+		letter-spacing: 0;
+		font-weight: 700;
+		font-size: rem(13);
+		border-radius: rem(20);
+		background-color: $color-gray_f7;
+	}
+}
+
+// sort
+.sort-group {
+	background-color: $color-white;
+}
+.sort-list {
+	display: flex;
+	padding: rem(15) rem(24) rem(12);
+	overflow: hidden;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.sort-item {
+	&:not(:first-child) {
+		margin-left: rem(4);
+	}
+	.sort {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: rem(30);
+		padding: 0 rem(12);
+		color: $color-battleship-grey;
+		font-size: rem(14);
+		border-radius: rem(30);
+		background-color: $color-gray_f6;
+        transition: all .3s;
+	}
+	&.is-active {
+		.sort {
+			color: $color-white;
+			font-weight: 700;
+			background-color: $color-spruce;
+			box-shadow: 0 rem(3) rem(6) 0 rgba(22, 29, 28, 0.23); //#161d1c
+		}
+	}
+}
