@@ -10,7 +10,6 @@
   <meta name="format-detection" content="telephone=no, address=no, email=no">
 
   <meta name="mobile-web-app-capable" content="yes">
-
   <title>BNK캐피탈</title>
   <link rel="stylesheet" href="../../assets/libs/swiper/swiper-bundle.min.css">
   <script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
@@ -33,7 +32,7 @@
         <!-- //#statusbar -->
         <!-- #header -->
         <div id="header" class="top-fixed">
-          <a href="loan.html" class="btn-prev">&lt;</a>
+          <button class="btn btn-back" onclick="history.go(-1); return false;"><i class="ic ic-back"></i><span class="sr-only">이전</span></button>
           <h2 class="title">직장인 신용대출</h2>
         </div>
         <!-- //#header -->
@@ -238,10 +237,36 @@
               <h3 class="tit">휴대폰 본인인증</h3>
             </div>
             <div class="pop-body">
-              휴대폰 본인인증
+              <!-- <div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step01-1.png"><img src="../../assets/img/pop1-step01-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step02-1.png"><img src="../../assets/img/pop1-step02-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step03-1.png"><img src="../../assets/img/pop1-step03-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step04-1.png"><img src="../../assets/img/pop1-step04-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step05-1.png"><img src="../../assets/img/pop1-step05-2.png"></div>
+							  <div class="swiper-slide"><img src="../../assets/img/pop1-step06-1.png"><img src="../../assets/img/pop1-step06-2.png"></div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						  </div> -->
+
+              <ul class="step-list">
+                <li class="is-show"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-2.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-2.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-2.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-2.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-2.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-1.png"></a></li>
+                <li><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-2.png"></a></li>
+              </ul>
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt40">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress1"><span>완료</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -257,10 +282,23 @@
               <h3 class="tit">개인정보조회 약관동의</h3>
             </div>
             <div class="pop-body">
-              개인정보조회 약관동의
+              <!-- <ul class="step-list">
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step01-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step02-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step03-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step04-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step05-2.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-1.png"></a></li>
+							<li class="step-item"><a href="javascript:vold(0);" class="step-next"><img src="../../assets/img/pop1-step06-2.png"></a></li>
+						</ul> -->
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress2"><span>완료</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -279,7 +317,7 @@
               직장, 소득정보
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress3"><span>다음</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -298,7 +336,7 @@
               인증
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress4"><span>확인</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -317,7 +355,7 @@
               고객 적합성/적정석 확인
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress5"><span>다음</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -336,7 +374,7 @@
               대출신청정보
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress6"><span>대출진행</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -355,7 +393,7 @@
               서류제출<br>
             </div>
             <!-- .btn-group-row -->
-            <div class="btn-group-row">
+            <div class="btn-group-row mgt20">
               <button type="button" class="btn btn-pop-primary popup-close progress-open" data-progress="progress7"><span>제출완료</span></button>
             </div>
             <!-- //.btn-group-row -->
@@ -375,8 +413,55 @@
   <!-- //#wrapper_web -->
 
   <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "fade",
+      touchRatio: 0,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".btn-step-next",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+    });
 
 
+    // document.querySelectorAll('.step-next').forEach(nextShow => {
+    // 	// const nextId = nextShow.dataset.next;
+    // 	// const elNext = document.querySelector('#' + nextId);
+    // 	// if (elNext !== null) {
+    // 	// 	nextShow.addEventListener('click', () => {
+    // 	// 		elNext.classList.add('is-show');
+
+    // 	// 		console.log(nextId);
+
+    // 	// 	})
+    // 	// }
+
+    // 	nextShow.addEventListener('click', () => {
+    // 			// elNext.classList.add('is-show');
+
+    // 			console.log(nextShow);
+
+    // 		})
+
+
+    // })
+    // function fnGoInsert(){
+    // 		var step = document.querySelectorAll('.step-next');
+
+    // 		function btn_click(idx){
+    // 			step[idx].onclick = function(){
+    // 		        console.log(idx);
+    // 		    };
+    // 		}
+
+    // 		for(var i=0; i<step.length; i++){
+    // 		  btn_click(i);  
+    // 		}
+    //  }
+    //  fnGoInsert();
 
   </script>
 
