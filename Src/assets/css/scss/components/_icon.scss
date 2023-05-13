@@ -5,45 +5,28 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	$icon: (
+	$icon-svg: (
 		'back': (rem(24), rem(24)),
-		'refresh': (rem(24), rem(24)),
-		'refresh-black': (rem(24), rem(24)),
-		'mypage': (rem(24), rem(24)),
-		'close-white': (rem(24), rem(24)),
-		'delivery': (rem(48), rem(48)),
-		'msg': (rem(19), rem(19)),
-		'time': (rem(16), rem(16)),
-		'etc': (rem(20), rem(20)),
-		'receipt': (rem(20), rem(20)),
-		'info': (rem(20), rem(20)),
-		'phone': (rem(20), rem(20)),
-		'location': (rem(20), rem(20)),
-		'trash': (rem(34), rem(34)),
-		'notdone': (rem(18), rem(18)),
-		'filter': (rem(22), rem(20)),
-		'reset': (rem(22), rem(22)),
-		'home': (rem(28), rem(28)),
-		'photo': (rem(24), rem(24)),
-		'slide-arrow': (rem(20), rem(20)),
-		'delete': (rem(40), rem(40)),
-		'arrow-right': (rem(12), rem(27)),
-		'id-result': (rem(109), rem(85)),
-		'system-error': (rem(150), rem(150)),
-		'system-error-network': (rem(229), rem(85)),
-		'tmap': (rem(19), rem(19)),
-		'kakaonavi': (rem(18), rem(20)),
+		'close-full': (rem(24), rem(24)),
+		'close-pop': (rem(20), rem(20)),
 	);
-	@each $name, $size in $icon {
+	@each $name, $size in $icon-svg {
 		&-#{$name} {
 			width: nth($size, 1);
 			height: nth($size, 2);
 			background-image: url("../img/ic-#{$name}.svg");
 		}
 	}
-}
-
-// expend
-.ic-system-error {
-	background-image: url("../img/ic-system-error.png");
+	$icon-png: (
+		'bot': (rem(30), rem(30)),
+		'edit': (rem(30), rem(30)),
+		'required-error': (rem(12), rem(12)),
+	);
+	@each $name, $size in $icon-png {
+		&-#{$name} {
+			width: nth($size, 1);
+			height: nth($size, 2);
+			background-image: url("../img/ic-#{$name}.png");
+		}
+	}
 }

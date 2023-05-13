@@ -35,25 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	let prevScroll = 0;
+	// let prevScroll = 0;
 	//section.addEventListener('scroll', getScrollDirection);
 
-	function getScrollDirection() {
-		const currScroll = Math.round(this.scrollTop);
-		if (actionbar !== null) {
-			if (currScroll > section.scrollHeight - section.clientHeight - actionbar.clientHeight) {
-				bottom.classList.remove('hide');
-			} else {
-				if (prevScroll > currScroll) {
-					bottom.classList.remove('hide');
-				}
-				else {
-					bottom.classList.add('hide');
-				}
-			}
-			prevScroll = currScroll;
-		}
-	}
+	// function getScrollDirection() {
+	// 	const currScroll = Math.round(this.scrollTop);
+	// 	if (actionbar !== null) {
+	// 		if (currScroll > section.scrollHeight - section.clientHeight - actionbar.clientHeight) {
+	// 			bottom.classList.remove('hide');
+	// 		} else {
+	// 			if (prevScroll > currScroll) {
+	// 				bottom.classList.remove('hide');
+	// 			}
+	// 			else {
+	// 				bottom.classList.add('hide');
+	// 			}
+	// 		}
+	// 		prevScroll = currScroll;
+	// 	}
+	// }
 
 
 	// if (window.NodeList && !NodeList.prototype.forEach) {
@@ -66,10 +66,78 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (elPop !== null) {
 			popOpen.addEventListener('click', () => {
 				elPop.classList.add('is-active');
+
+
+				if (elPop.querySelector('.pop-head') !== null && elPop.querySelector('.pop-head').classList.contains('in-progress-bar') === true) {
+					const stepCount = elPop.querySelector('.step-list').childElementCount;
+					const currentBar = Math.round(1 / (stepCount-1) * 100);
+					//console.log(currentBar)
+					if (elPop.querySelector('.progress-bar') !== null) {
+						elPop.querySelector('.progress-bar > span').style.width = currentBar + '%';
+					}
+				};
+
+				if (elPop.querySelector('.step-list') !== null) {
+
+					elPop.querySelectorAll('.step-item').forEach((stepItem, index, array) => {
+						const stepBtn = stepItem.querySelector('.btn');
+	
+						stepItem.classList.remove('is-show');
+						
+						stepItem.addEventListener('click', ev => {
+							if (ev.target.classList.contains('step-disabled') === true) {
+								ev.target.parentNode.classList.add('is-active');
+								if (stepBtn.disabled === true) {
+									stepBtn.disabled = false;
+								}
+							}
+							if (ev.target.classList.contains('next-show') === true) {
+								ev.target.parentNode.classList.remove('is-show');
+								const currentBar = Math.round(((index + 2) / array.length) * 100);
+								//console.log(currentBar)
+								elPop.querySelector('.progress-bar > span').style.width = currentBar + '%';
+							}
+							
+						})
+					})
+					elPop.querySelector('.step-item').classList.add('is-show');
+				};
+
+				//progress bar
+				const elProgress = document.getElementById('progress-pop');
+				const countdownElement = document.getElementById("countdown");
+				if (elProgress !== null && elProgress.classList.contains("is-active")) {
+
+					let count = 1;
+
+					function updateCountdown() {
+						countdownElement.textContent = count;
+						count++;
+
+						if (count > 100) {
+							setTimeout(closePopup, 1500);
+						} else {
+							setTimeout(updateCountdown, 40);
+						}
+					}
+
+					function closePopup() {
+						elProgress.classList.remove('is-active');
+					}
+
+					setTimeout(updateCountdown, 100);
+
+				}
+
 			})
 			elPop.querySelectorAll('.popup-close').forEach(popClose => {
 				popClose.addEventListener('click', () => {
 					elPop.classList.remove('is-active');
+
+					// elPop.querySelectorAll('.step-item').forEach(stepItem => {
+					// 	stepItem.classList.remove('is-show');
+					// })
+					
 				});
 			})
 		}
@@ -81,12 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (elProgress !== null) {
 			progressOpen.addEventListener('click', () => {
 				elProgress.classList.add('is-show');
-
 				const scrollPosition = elProgress.offsetTop;
 				// document.querySelector("#scrollArea").scrollTop = scrollPosition;
-				document.querySelector("#scrollArea").scrollTo({top: scrollPosition - 300, behavior: 'smooth'});
+				document.querySelector("#scrollArea").scrollTo({top: scrollPosition - 120, behavior: 'smooth'});
 
-				console.log(scrollPosition);
+				//console.log(scrollPosition);
 			})
 		}
 	})
@@ -98,42 +165,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			nextShow.addEventListener('click', () => {
 				elNext.classList.add('is-show');
 
-				console.log(nextId);
-
-				if (nextId === 'next4-1' || nextId === 'next5-1') {
+				//console.log(nextId);
+				if (
+					nextId === 'next1-1' || 
+					nextId === 'next4-1' || 
+					nextId === 'next5-1' || 
+					nextId === 'next5-2' || 
+					nextId === 'next7-1' || 
+					nextId === 'next8-1' || 
+					nextId === 'next8-2'
+					) {
 					const scrollPosition2 = elNext.offsetTop;
-					document.querySelector("#scrollArea").scrollTo({top: scrollPosition2 - 200, behavior: 'smooth'});
+					document.querySelector("#scrollArea").scrollTo({top: scrollPosition2 - 120, behavior: 'smooth'});
 					
 				}
 			})
 		}
 	})
-
-	const tabList = document.querySelectorAll('.step-list li');
-	for(var i = 0; i < tabList.length; i++){
-		tabList[i].querySelector('.step-next').addEventListener('click', function(e){
-			e.preventDefault();
-			for(var j = 0; j < tabList.length; j++){
-				tabList[j].classList.remove('is-show');
-			}
-			this.parentNode[i].classList.add('is-show');
-		});
-	}
-
-
-	// document.querySelectorAll('.step-list').forEach(stepList => {
-	// 	const stepItem = stepList.querySelectorAll('.step-item');
-	// 	stepList.addEventListener('click', ev => {
-
-	// 		console.log(ev.target)
-
-	// 		// if (ev.target.className === stepCase[i]) {
-	// 		// 	for (let j = 0; j < stepItem.length; j+=1) {
-	// 		// 		stepItem[j].classList.remove('is-active');
-	// 		// 	}
-	// 		// 	ev.target.parentNode.classList.add('is-active');
-	// 		// }
-	// 	})
-	// })
 
 });
