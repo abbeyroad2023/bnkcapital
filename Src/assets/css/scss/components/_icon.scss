@@ -18,9 +18,11 @@
 		}
 	}
 	$icon-png: (
+		'share': (rem(40), rem(40)),
 		'bot': (rem(30), rem(30)),
 		'edit': (rem(30), rem(30)),
 		'required-error': (rem(12), rem(12)),
+		'progress': (rem(136), rem(157)),
 	);
 	@each $name, $size in $icon-png {
 		&-#{$name} {
