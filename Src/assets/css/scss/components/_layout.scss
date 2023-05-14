@@ -579,6 +579,16 @@ section {
 		.popup-head {
 			top: 0;
 		}
+		.popup-inner {
+			position: relative;
+			height: calc(100% - (68px));
+			margin-top: 68px;
+		}
+		.link-box {
+			top: 0;
+			height: 68px;
+			z-index: 99999;
+		}
 	}
 }
 
