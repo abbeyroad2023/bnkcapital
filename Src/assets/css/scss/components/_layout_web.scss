@@ -74,6 +74,9 @@
 }
 
 @media(max-width: 750px) {
+	#wrapper_web {
+		background-color: #fff;
+	}
 	#container_web {
 		width: 100%;
 		height: 100%;
@@ -81,5 +84,4 @@
 			display: none;
 		}
 	}
-
 }
