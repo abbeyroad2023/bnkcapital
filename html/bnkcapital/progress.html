@@ -11,7 +11,7 @@
 
   <meta name="mobile-web-app-capable" content="yes">
 
-  <link rel="manifest" href="manifest.json">
+  <!-- <link rel="manifest" href="manifest.json"> -->
   <title>BNK캐피탈</title>
   <link rel="stylesheet" href="../../assets/libs/swiper/swiper-bundle.min.css">
   <script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
@@ -149,9 +149,9 @@
                   <div class="bot-box">
                     <p>건강보험공단, 국세청 등 공공기간의 정확인을 위한 <em>공동인증서</em> 또는 <em>금융인증서</em>로 인증이 필요합니다.</p>
                     <div class="btn-group-col">
-                      <button type="button" class="btn btn-secondary popup-open" data-popup="pop4-1"><span>공동인증서 인증
+                      <button type="button" class="btn btn-secondary popup-open" data-popup="progress-pop"><span>공동인증서 인증
 										</span></button>
-                      <button type="button" class="btn btn-secondary popup-open" data-popup="pop4-2"><span>금융인증서 인증</span></button>
+                      <button type="button" class="btn btn-secondary popup-open" data-popup="progress-pop"><span>금융인증서 인증</span></button>
                     </div>
                   </div>
                 </div>
@@ -175,7 +175,7 @@
                       <dt>예상한도</dt>
                       <dd><strong>85,000,000</strong><span>원</span></dd>
                       <dt>예상금리</dt>
-                      <dd><span class="em">년</span><strong class="em">4,03%</strong></dd>
+                      <dd><span class="em">연</span><strong class="em">4,03%</strong></dd>
                     </dl>
                     <ul class="ul-list mgt20 top-line">
                       <li>대출 한도/금리는 실제 대출 신청일에 변동될 수 있습니다.</li>
@@ -200,12 +200,12 @@
                     <div class="bot-box">
                       <p>지금까지 잘 따라오셨습니다.<br><br>몇 가지 정보만 더 알려주시면 대출신청이 완료됩니다. <br>아래의 신청절차안내를 확인 해주세요.</p>
                       <ul class="ul-step mgt20">
-                        <li>
+                        <li class="is-disabled">
                           <small>STEP 1</small>
                           <strong>간편한도조회</strong>
                           <p>대출에 필요한 고객님의 몇가지 정보로 한도와 금리를 간편하게 조회해드려요.</p>
                         </li>
-                        <li>
+                        <li class="is-active">
                           <small>STEP 2</small>
                           <strong>신청정보 확인/추가 입력</strong>
                           <p>입력된 정보, 대출신청금액 등 자세한 대출 신청정보를 확인/입력해요.</p>
@@ -247,7 +247,7 @@
                     <ul class="ul-list fc-white mgt20 top-line">
                       <li>용도 <strong>의료비</strong></li>
                       <li>자산 <strong>1억원 이상~5억원 미만</strong></li>
-                      <li>연소득 <strong">8천만원 이상</strong></li>
+                      <li>연소득 <strong>8천만원 이상</strong></li>
                       <li>총 부채 <strong>1천만원 미만</strong></li>
                       <li>고정지출 <strong>소득의 50% 미만</strong></li>
                       <li>연체여부 <strong>없음</strong></li>
@@ -405,7 +405,7 @@
                       <dt>대출신청금액</dt>
                       <dd><strong>7,500</strong><span>만원</span></dd>
                       <dt>적용금리</dt>
-                      <dd><span>년</span><strong>4,03%</strong></dd>
+                      <dd><span>연</span><strong>4,03%</strong></dd>
                       <dt>대출기간</dt>
                       <dd><strong>24</strong><span>개월</span></dd>
                       <dt>월 납입금(A+B)</dt>
@@ -417,7 +417,7 @@
                     </dl>
                     <p class="mgt20">전자서명 후, <br>당사의 내부 확인이 약 1시간~2시간 정도 소요될 예정입니다. <br><br>고객님의 알림톡으로 대출약정서를 확인요청 예정이며, 약정서에 전자서명을 하시면 고객님께서 요청하신 계좌로 즉시 입금됩니다.</p>
                     <div class="btn-group-col">
-                      <button type="button" class="btn btn-secondary next-show" data-next="next8-1"><span>대출신청완료</span></button>
+                      <button type="button" class="btn btn-secondary next-show popup-open" data-next="next8-1" data-popup="kakao-pop"><span>대출신청완료</span></button>
                     </div>
                   </div>
                 </div>
@@ -434,29 +434,35 @@
                       <p>대출신청정보를 고객님의 이메일(ABC@aaa.com)로 전달하였습니다. <br><br>감사합니다.</p>
                     </div>
                   </div>
-                  <div class="bot-cont">
-                    <div class="bot-profile"><span class="bot-photo"><i class="ic ic-bot"></i></span>BNK Capital 챗봇</div>
-                    <div class="bot-box">
-                      <p>다시 만나게 되어 더 반갑습니다. <br><br>보내드린 약정서는 확인 해 보셨나요? 최종 약정서에 전자서명을 하시면 고객님께서 요청하신 계좌로 즉시 입급됩니다.</p>
-                      <div class="btn-group-col">
-                        <button type="button" class="btn btn-secondary next-show" data-next="next8-2"><span>전자서명하기</span></button>
-                        <button type="button" class="btn btn-secondary"><span>약정서 보기</span></button>
-                      </div>
+                </div>
+              </div>
+
+
+              <div id="progress9" class="progress-chat">
+                <div class="bot-cont">
+                  <div class="bot-profile"><span class="bot-photo"><i class="ic ic-bot"></i></span>BNK Capital 챗봇</div>
+                  <div class="bot-box">
+                    <p>다시 만나게 되어 더 반갑습니다. <br><br>보내드린 약정서는 확인 해 보셨나요? 최종 약정서에 전자서명을 하시면 고객님께서 요청하신 계좌로 즉시 입급됩니다.</p>
+                    <div class="btn-group-col">
+                      <button type="button" class="btn btn-secondary popup-open" data-popup="pop10"><span>약정서 보기</span></button>
+                      <button type="button" class="btn btn-secondary popup-open" data-popup="pop10"><span>전자서명하기</span></button>
                     </div>
                   </div>
                 </div>
-                <div id="next8-2" class="next-chat">
-                  <div class="user-cont">
-                    <div class="user-box">
-                      <p>전자서명하기</p>
-                      <button type="button" class="btn btn-edit"><i class="ic ic-edit"></i></button>
-                    </div>
+              </div>
+
+
+              <div id="progress10" class="progress-chat">
+                <div class="user-cont">
+                  <div class="user-box">
+                    <p>전자서명하기</p>
+                    <button type="button" class="btn btn-edit"><i class="ic ic-edit"></i></button>
                   </div>
-                  <div class="bot-cont">
-                    <div class="bot-profile"><span class="bot-photo"><i class="ic ic-bot"></i></span>BNK Capital 챗봇</div>
-                    <div class="bot-box">
-                      <p>대출약정이 완료되었습니다. <br><br>신청하신 대출금은 즉시 입금될 예정입니다. <br><br>1시간 이내에 입금이 되지 않은 경우, 당사 고객센터 1577-2280으로 연락주시면 됩니다. <br><br>정말 진심으로 감사드립니다.</p>
-                    </div>
+                </div>
+                <div class="bot-cont">
+                  <div class="bot-profile"><span class="bot-photo"><i class="ic ic-bot"></i></span>BNK Capital 챗봇</div>
+                  <div class="bot-box">
+                    <p>대출약정이 완료되었습니다. <br><br>신청하신 대출금은 즉시 입금될 예정입니다. <br><br>1시간 이내에 입금이 되지 않은 경우, 당사 고객센터 1577-2280으로 연락주시면 됩니다. <br><br>정말 진심으로 감사드립니다.</p>
                   </div>
                 </div>
               </div>
@@ -614,57 +620,16 @@
         <i class="modal-dim"></i>
         <!-- //bottom-sheet -->
 
-
-
-
-
-
-
-        <!-- .bottom-sheet -->
-        <div class="popup bottom-sheet" id="pop4-1">
-          <div class="inner">
-            <div class="pop-head">
-              <h3 class="tit">공동인증서 인증</h3>
-            </div>
-            <div class="pop-body">
-              공동인증서 인증
-            </div>
-            <!-- .btn-group-row -->
-            <div class="btn-group-row mgt20">
-              <button type="button" class="btn btn-primary popup-close progress-open popup-open" data-progress="progress4" data-popup="progress-pop"><span>확인</span></button>
-            </div>
-            <!-- //.btn-group-row -->
+        <!-- .progress-popup -->
+        <div class="popup progress-popup" id="progress-pop">
+          <div class="popup-inner">
+            <div class="progress-status"><em id="countdown" class="count">1</em><span>%</span></div>
+            <i class="ic ic-progress-ani"></i>
+            <strong>공공기관에서 고객님의 <br>소중한 데이터를 확인 중입니다.</strong>
+            <p class="txt">조회한 고객님의 소중한 데이터는 <br>한도를 산정 후, 폐기됩니다.</p>
           </div>
         </div>
-        <i class="modal-dim"></i>
-        <!-- //bottom-sheet -->
-
-        <!-- .bottom-sheet -->
-        <div class="popup bottom-sheet" id="pop4-2">
-          <div class="inner">
-            <div class="pop-head">
-              <h3 class="tit">금융인증서 인증
-              </h3>
-            </div>
-            <div class="pop-body">
-              금융인증서 인증
-            </div>
-            <!-- .btn-group-row -->
-            <div class="btn-group-row mgt20">
-              <button type="button" class="btn btn-primary popup-close progress-open popup-open" data-progress="progress4" data-popup="progress-pop"><span>확인</span></button>
-            </div>
-            <!-- //.btn-group-row -->
-          </div>
-        </div>
-        <i class="modal-dim"></i>
-        <!-- //bottom-sheet -->
-
-
-
-
-
-
-
+        <!-- //progress-popup -->
 
         <!-- .bottom-sheet //고객 적합성/적정성 확인 -->
         <div class="popup bottom-sheet" id="pop5">
@@ -779,8 +744,13 @@
             <button class="btn btn-close-full popup-close"><i class="ic ic-close-full"></i><span class="sr-only">닫기</span></button>
           </div>
           <div class="popup-inner">
-            <div class="div-cont fs0 popup-close popup-open" data-popup="pop7-2">
+            <div class="div-cont fs0">
               <img src="../../assets/img/pop7-1.png">
+            </div>
+          </div>
+          <div id="floatingBtn" class="shoot">
+            <div class="btn-group-row">
+              <button type="button" class="btn btn-shoot popup-close popup-open" data-popup="pop7-2"><i class="ic ic-shoot"></i></button>
             </div>
           </div>
         </div>
@@ -799,7 +769,6 @@
           </div>
           <div id="floatingBtn">
             <div class="btn-group-row">
-              <button type="button" class="btn btn-primary" style="width:54%;" disabled><span>재촬영</span></button>
               <button type="button" class="btn btn-primary popup-close"><span>다음</span></button>
             </div>
           </div>
@@ -832,8 +801,13 @@
             <button class="btn btn-close-full popup-close"><i class="ic ic-close-full"></i><span class="sr-only">닫기</span></button>
           </div>
           <div class="popup-inner">
-            <div class="div-cont fs0 popup-close popup-open" data-popup="pop8-2">
+            <div class="div-cont fs0">
               <img src="../../assets/img/pop8-1.png">
+            </div>
+          </div>
+          <div id="floatingBtn" class="shoot">
+            <div class="btn-group-row">
+              <button type="button" class="btn btn-shoot popup-close popup-open" data-popup="pop8-2"><i class="ic ic-shoot"></i></button>
             </div>
           </div>
         </div>
@@ -852,23 +826,45 @@
           </div>
           <div id="floatingBtn">
             <div class="btn-group-row">
-              <button type="button" class="btn btn-primary" style="width:54%;" disabled><span>재촬영</span></button>
               <button type="button" class="btn btn-primary popup-close"><span>다음</span></button>
             </div>
           </div>
         </div>
         <!-- //full-popup -->
 
-        <!-- .progress-popup -->
-        <div class="popup progress-popup" id="progress-pop">
+        <!-- .kakao-popup -->
+        <div class="popup kakao-popup" id="kakao-pop">
           <div class="popup-inner">
-            <div class="progress-status"><em id="countdown" class="count">1</em><span>%</span></div>
-            <i class="ic ic-progress"></i>
-            <strong>공공기관에서 고객님의 <br>소중한 데이터를 확인 중입니다.</strong>
-            <p class="txt">조회한 고객님의 소중한 데이터는 <br>한도를 산정 후, 폐기됩니다.</p>
+            <div class="div-cont fs0 popup-close progress-open" data-progress="progress9">
+              <img src="../../assets/img/pop-kakao.png">
+            </div>
           </div>
         </div>
-        <!-- //progress-popup -->
+        <!-- //kakao-popup -->
+
+        <!-- .bottom-sheet //청약 -->
+        <div class="popup bottom-sheet" id="pop10">
+          <div class="inner">
+            <div class="pop-head">
+              <p class="pop-tit">청약</p>
+              <button class="btn btn-close-pop popup-close"><i class="ic ic-close-pop"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="pop-body step-list">
+              <div class="step-item">
+                <p class="step-disabled"><img src="../../assets/img/pop10-step01-1.png"></p>
+                <p class="step-active"><img src="../../assets/img/pop10-step01-2.png"></p>
+
+                <div class="btn-group-row">
+                  <button type="button" id="auth1" class="btn btn-primary type2 popup-close progress-open" data-progress="progress10"><span>공동인증서</span></button>
+                  <button type="button" id="auth2" class="btn btn-primary popup-close progress-open" data-progress="progress10"><span>금융인증서</span></button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="modal-dim"></i>
+        <!-- //bottom-sheet -->
 
 
       </div>
@@ -879,56 +875,8 @@
 
   </div>
   <!-- //#wrapper_web -->
-  <!-- <style>
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .popup {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      text-align: center;
-    }
-  </style>
-<div class="overlay">
-    <div class="popup">
-      <h1>Countdown Popup</h1>
-      <p id="countdown">1</p>
-    </div>
-  </div> -->
 
   <script>
-    // window.onload = function() {
-    //   var countdownElement = document.getElementById("countdown");
-    //   var count = 1;
-
-    //   function updateCountdown() {
-    //     countdownElement.textContent = count;
-    //     count++;
-
-    //     if (count > 100) {
-    //     //   closePopup();
-    //     } else {
-    //       setTimeout(updateCountdown, 100);
-    //     }
-    //   }
-
-    //   function closePopup() {
-    //     var overlayElement = document.querySelector(".overlay");
-    //     overlayElement.style.display = "none";
-    //   }
-
-    //   setTimeout(updateCountdown, 1000);
-    // };
 
   </script>
 
