@@ -24,6 +24,7 @@
 		'required-error': (rem(12), rem(12)),
 		'progress': (rem(136), rem(157)),
 		'shoot': (rem(80), rem(80)),
+		'hourglass': (rem(74), rem(88)),
 	);
 	@each $name, $size in $icon-png {
 		&-#{$name} {

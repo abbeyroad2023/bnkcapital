@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 								if (stepBtn.disabled === true) {
 									stepBtn.disabled = false;
 								}
-								if (auth1Btn.disabled === false) {
+								if (auth1Btn !== null && auth1Btn.disabled === false) {
 									auth2Btn.disabled = false;
 								}
 							}
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			})
 		}
-	})
+	});
 
 	document.querySelectorAll('.progress-open').forEach(progressOpen => {
 		const progressId = progressOpen.dataset.progress;
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				//console.log(scrollPosition);
 			})
 		}
-	})
+	});
 
 	document.querySelectorAll('.next-show').forEach(nextShow => {
 		const nextId = nextShow.dataset.next;
@@ -187,8 +187,25 @@ document.addEventListener("DOMContentLoaded", () => {
 					document.querySelector("#scrollArea").scrollTo({top: scrollPosition2 - 120, behavior: 'smooth'});
 					
 				}
+
+				if (nextId === 'next7-1') {
+					const callPop = document.querySelector('#call-pop');
+					function openCall() {
+						callPop.classList.add('is-active');
+					}
+					function closeCall() {
+						callPop.classList.remove('is-active');
+						document.querySelector('#progress7-1').classList.add('is-show');
+						const scrollPosition3 = document.querySelector('#progress7-1').offsetTop;
+						document.querySelector("#scrollArea").scrollTo({top: scrollPosition3 - 120, behavior: 'smooth'});
+					}
+					setTimeout(openCall, 1000);
+					setTimeout(closeCall, 3000);
+				}
 			})
 		}
-	})
+	});
+
+
 
 });
