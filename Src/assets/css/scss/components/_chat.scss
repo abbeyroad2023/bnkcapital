@@ -231,6 +231,15 @@
                 font-size: rem(12);
                 font-weight: 600; 
             }
+            &.is-disabled {
+                opacity: .4;
+            }
+            &.is-active {
+                color: #777;
+                strong {
+                    color: #222;
+                }
+            }
         }
     }
 }

@@ -169,6 +169,10 @@ section {
 	button {
 		border: 0;
 	}
+	&.shoot {
+		padding: rem(40) rem(20);
+		height: rem(160);
+	}
 }
 
 .div-cont {
@@ -347,6 +351,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	// background-color: rgba(#fff, .95);
+	border-radius: rem(10);
 	background-color: #F6F5F5;
 	transition: all .3s ease-in-out;
 	opacity: 0;
@@ -374,7 +379,7 @@ section {
 				margin-top: rem(20);
 			}
 		}
-		.ic-progress {
+		.ic-progress-ani {
 			display: block;
 			margin-top: rem(60);
 		}
@@ -392,6 +397,24 @@ section {
 			line-height: 1.625;
 		}
 
+	}
+}
+
+// kakao-popup
+.kakao-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #9bbbd4;
+	border-radius: rem(10);
+	transition: all .3s ease-in-out;
+	opacity: 0;
+	z-index: -1;
+	&.is-active {
+		opacity: 1;
+		z-index: 9999;
 	}
 }
 
@@ -590,5 +613,10 @@ section {
 			z-index: 99999;
 		}
 	}
+	.progress-popup,
+	.kakao-popup {
+		border-radius: 0;
+	}
+	
 }
 

@@ -23,12 +23,24 @@
 		'edit': (rem(30), rem(30)),
 		'required-error': (rem(12), rem(12)),
 		'progress': (rem(136), rem(157)),
+		'shoot': (rem(80), rem(80)),
 	);
 	@each $name, $size in $icon-png {
 		&-#{$name} {
 			width: nth($size, 1);
 			height: nth($size, 2);
 			background-image: url("../img/ic-#{$name}.png");
+		}
+	}
+	$icon-gif: (
+		'limit-ani': (rem(164), rem(153)),
+		'progress-ani': (rem(136), rem(152)),
+	);
+	@each $name, $size in $icon-gif {
+		&-#{$name} {
+			width: nth($size, 1);
+			height: nth($size, 2);
+			background-image: url("../img/ic-#{$name}.gif");
 		}
 	}
 }

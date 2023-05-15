@@ -81,7 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 					elPop.querySelectorAll('.step-item').forEach((stepItem, index, array) => {
 						const stepBtn = stepItem.querySelector('.btn');
-	
+						const auth1Btn = stepItem.querySelector('#auth1');
+						const auth2Btn = stepItem.querySelector('#auth2');
+
 						stepItem.classList.remove('is-show');
 						
 						stepItem.addEventListener('click', ev => {
@@ -89,6 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
 								ev.target.parentNode.classList.add('is-active');
 								if (stepBtn.disabled === true) {
 									stepBtn.disabled = false;
+								}
+								if (auth1Btn.disabled === false) {
+									auth2Btn.disabled = false;
 								}
 							}
 							if (ev.target.classList.contains('next-show') === true) {
@@ -115,14 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
 						count++;
 
 						if (count > 100) {
-							setTimeout(closePopup, 1500);
+							setTimeout(closePopup, 1200);
 						} else {
-							setTimeout(updateCountdown, 40);
+							setTimeout(updateCountdown, 30);
 						}
 					}
 
 					function closePopup() {
 						elProgress.classList.remove('is-active');
+						document.querySelector('#progress4').classList.add('is-show');
+						const scrollPosition = document.querySelector('#progress4').offsetTop;
+						document.querySelector("#scrollArea").scrollTo({top: scrollPosition - 120, behavior: 'smooth'});
 					}
 
 					setTimeout(updateCountdown, 100);
