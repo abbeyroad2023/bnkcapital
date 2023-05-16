@@ -19,6 +19,30 @@
   <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
+<style>
+  .ani-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .ani-box .ic-hourglass {
+    animation: hourglassMov .8s ease-in-out infinite alternate;
+  }
+
+  @keyframes hourglassMov {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+</style>
+
 <body>
 
   <!-- #wrapper_web -->
@@ -32,13 +56,6 @@
         <!-- #statusbar -->
         <div id="statusbar"></div>
         <!-- //#statusbar -->
-        <!-- //#statusbar -->
-        <!-- #header -->
-        <div id="header">
-          <button class="btn btn-back" onclick="history.go(-1); return false;"><i class="ic ic-back"></i><span class="sr-only">이전</span></button>
-          <h2 class="title">대출이 필요하세요?</h2>
-        </div>
-        <!-- //#header -->
 
         <!-- #container -->
         <div id="container">
@@ -74,7 +91,7 @@
               <button class="btn btn-close-pop popup-close"><i class="ic ic-close-pop"></i><span class="sr-only">닫기</span></button>
             </div>
             <div class="pop-body">
-              <div class="div-cont fs0 center">
+              <div class="div-cont fs0 center ani-box">
                 <i class="ic ic-hourglass"></i>
               </div>
               <div class="div-cont fs0 mgt40">
