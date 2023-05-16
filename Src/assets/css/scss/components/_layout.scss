@@ -16,7 +16,10 @@
 	transition: all .4s;
 	z-index: 6;
 	&.loan {
-		background: url("../img/layout-statusbar-loan.png") no-repeat center / cover;
+		background-color: #f9f9f9;
+		&.is-white {
+			background-color: #fff;
+		}
 	}
 }
 #header {
@@ -28,11 +31,16 @@
 	height: 122px;
 	transition: all .4s;
 	background-color: rgba(255,255,255,.9);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
 	z-index: 6;
 	&.header-main {
 		height: 68px;
 		padding-top: 68px;
 		background: url("../img/layout-header-main.png") no-repeat center / cover;
+		background-color: rgba(255, 255, 255, 0.9);
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 		&.scroll {
 			height: 68px;
 		}

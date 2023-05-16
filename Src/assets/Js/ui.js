@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	section.addEventListener('scroll', () => {
 		const secScroll = Math.round(section.scrollTop);
+
 		if (secScroll > 0) {
 			// if (statusbar !== null) {
 			// 	statusbar.classList.add('scroll');
@@ -33,6 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				header.classList.remove('scroll');
 			}
 		}
+
+		if (document.querySelector('.mobile_area').classList.contains('page-submain') && secScroll > 318) {
+			document.querySelector('#statusbar').classList.add('is-white')
+		} else {
+			document.querySelector('#statusbar').classList.remove('is-white')
+		}
+
 	});
 
 	// let prevScroll = 0;
