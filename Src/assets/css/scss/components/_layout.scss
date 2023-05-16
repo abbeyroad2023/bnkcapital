@@ -15,6 +15,9 @@
 	background-color: #fff;
 	transition: all .4s;
 	z-index: 6;
+	&.loan {
+		background: url("../img/layout-statusbar-loan.png") no-repeat center / cover;
+	}
 }
 #header {
 	position: absolute;
@@ -24,7 +27,7 @@
 	padding: 0;
 	height: 122px;
 	transition: all .4s;
-	background-color: #fff;
+	background-color: rgba(255,255,255,.9);
 	z-index: 6;
 	&.header-main {
 		height: 68px;
@@ -162,6 +165,8 @@ section {
 	height: rem(118);
 	font-size: rem(24);
 	transition: all .4s ease-out;
+	background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 	z-index: 6;
 	p:not(:first-child) {
 		margin-top: rem(8);
