@@ -191,11 +191,8 @@ section {
 }
 .page-submain {
 	section {
-		padding-top: 44px + 122px;
+		padding-top: 44px;
 		padding-bottom: rem(121);
-	}
-	.scroll + #container > section {
-		padding-top: 44px + 68px;
 	}
 }
 .page-sub {
