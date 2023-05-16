@@ -559,8 +559,6 @@ section {
 	z-index: -1;
 }
 
-
-
 @media(max-width: 750px) {
 	#statusbar {
 		display: none;
@@ -578,10 +576,7 @@ section {
 	}
 	.page-submain {
 		section {
-			padding-top: 122px;
-		}
-		.scroll + #container > section {
-			padding-top: 68px;
+			padding-top: 0;
 		}
 	}
 	.page-sub {
