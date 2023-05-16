@@ -110,6 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
 								//console.log(currentBar)
 								elPop.querySelector('.progress-bar > span').style.width = currentBar + '%';
 							}
+							if (ev.target.classList.contains('is-back') === true) {
+								ev.target.parentNode.classList.remove('is-show');
+								document.getElementById('step3-1').classList.add('is-show');
+								const currentBar = Math.round(((index + 2) / array.length) * 100);
+								elPop.querySelector('.progress-bar > span').style.width = '20%';
+								//console.log('처음으로')
+							}
 							
 						})
 					})
